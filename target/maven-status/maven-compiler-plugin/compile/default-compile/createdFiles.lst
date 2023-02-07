@@ -1,0 +1,8 @@
+com\category\service\CategoryServiceImpl.class
+com\category\controller\CategoryController.class
+com\category\bean\CategoryBean.class
+com\category\service\CategoryService.class
+com\category\mapper\DataMapper.class
+com\category\ManageCategoryServiceApplication.class
+com\category\repo\CategoryRepo.class
+com\category\model\Category.class
