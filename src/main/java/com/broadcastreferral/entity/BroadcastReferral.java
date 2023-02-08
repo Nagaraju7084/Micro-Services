@@ -2,15 +2,28 @@ package com.broadcastreferral.entity;
 
 import java.util.List;
 
-import javax.persistence.Entity;
+import javax.persistence.Id;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-@Entity
 @Data
+@Document("broadcastReferral")
+@EqualsAndHashCode(callSuper = false)
+@Schema(name = "BroadcastReferral", title="BroadcastReferral Model", description = "Core model for BroadcastReferral Entities")
+
 public class BroadcastReferral {
 	
-	private Long id;
+	@Id
+	private String id;
+	
+	@Field("refId")
+	private Long refId;
+	
 	private String memberId;
 	
 	private List<ProviderResponse> providerResponses;
